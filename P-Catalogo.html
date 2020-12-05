@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <meta name="keywords" content="VINOS, BEBIDAS, ALCOHOL, WHISKY, MALBEC, WINE">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>"Catalogo"</title>
+    <meta name="description" content="Bebidas Nacionales e Importadas al mejor precio! Compra sin moverte de tu casa. Hacemos envíos a todo el país">
+    
+    <!-- Bootstrap core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/bootstrap-responsive.min.css" rel="stylesheet">
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet" >
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <!-- Popper JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="estilo.css"/>
+    </head>
+    <body>
+    
+ <h1 align="center"> Catalogo </h1>
+  <div class="container mt-3">
+  <h2 align="center">Productos</h2>
+  <p>Busque su vino favorito</p>  
+  <input class="form-control" id="myInput" type="text" placeholder="Search..">
+  <div id="myDIV" class="mt-3">
+  <table  style="margin: 0 auto"  border="1" cellpadding="2px" cellspacing="0" > <!-- tabla centrada--> 
+  <tr><!-- inicio de fila-->   
+  <th>SKU</th>
+  <th>Descripción</th>   
+  <th>$Precio/unidad </th>
+  <th>Descripción </th>
+  </tr><!-- cierre de fila --> 
+
+  <tr><!-- inicio de otra fila-->   
+  <td align="center"> 2178975</td>   
+  <td align="left">Finca Las Moras <img src="imagenes/fincalasmoras.jpg" alt="Finca Las Moras" width="25%" height="35%" align="left"> </td>   
+  <td align="center">200</td> 
+  <td><ul>
+  <li>%Alc: 14</li>
+  <li>Amargor: 50</li>
+  <li>Uvas: Malberc & Cabernet</li>
+  </ul>
+  </td>
+  </tr><!-- cierre de la segunda fila --> 
+
+  <tr><!-- inicio de otra fila-->   
+  <td align="center"> 2178976</td>   
+  <td align="left">Trumpeter <img src="imagenes/trumpeter.jpg" alt="Trumpeter" width="25%" height="35%" align="left"> </td>  
+  <td align="center">300</td> 
+  <td><ul>
+  <li>%Alc: 12</li>
+  <li>Amargor: 35</li>
+  <li>Uvas: Malberc</li>
+  </ul>
+  </td>
+  </tr><!-- cierre de la segunda fila --> 
+  <tr><!-- inicio de otra fila-->   
+  <td align="center"> 2178977</td>   
+  <td align="left"> Uxmal <img src="imagenes/uxmal.jpg" alt="Uxmal" width="25%" height="35%" align="left"> </td>  
+  <td align="center">250</td> 
+  <td><ul>
+  <li>%Alc: 13</li>
+  <li>Amargor: 55</li>
+  <li>Uvas: Malberc</li>
+  </ul>
+  </td>
+  </tr><!-- cierre de la segunda fila --> 
+
+  <tr><!-- inicio de otra fila-->   
+  <td align="center"> 2178978</td>   
+  <td align="left">Las perdices <img src="imagenes/lasperdices.jpg" alt="Uxmal" width="25%" height="35%" align="left"> </td>     
+  <td align="center">190</td> 
+  <td><ul>
+  <li>%Alc: 13,5</li>
+  <li>Amargor: 46</li>
+  <li>Uvas: Malberc</li>
+  </ul>
+  </td>
+  </tr><!-- cierre de la segunda fila --> 
+  </table> <br></br>
+  </div>
+</div>
+
+<script>
+$(document).ready(function(){
+  $("#myInput").on("keyup", function() {
+    var value = $(this).val().toLowerCase();
+    $("#myDIV *").filter(function() {
+      $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+    });
+  });
+});
+</script>
+ 
+ <a href="Index.html"><h6> Volver al menú principal</h6></a>
+ 
+  </body> 
+	</html>
